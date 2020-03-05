@@ -1,0 +1,13 @@
+print('------------------')
+print("F    C   Approx C")
+
+F = 0
+dF = 10
+
+while F <= 100:
+    C = (5.0/9)*(F - 32)
+    Ca = (F-30)/2
+    print(F, round(C,1), round(Ca,1))
+    F = F + dF
+
+print('------------------')
