@@ -1,0 +1,22 @@
+#We want to generate n + 1 equally spaced x coordinates in [a, b]. Store the coordinates in a list.
+# a) Start with an empty list, use a for loop and append each coordinate to the list.
+# Use a list comprehension
+
+a = 0
+b = 10
+n = 10
+
+h = (b-a)/n
+#a
+list = []
+for i in range(0, n+1):
+    list.append(a+i*h)
+print(list)
+
+#b list comprehension
+
+c = [a+i*h for i in range(n+1)]
+print(c)
+
+
+
