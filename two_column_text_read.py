@@ -1,5 +1,6 @@
 from numpy import *
 
+
 def two_column_text_read(file_name):
 
         x = []
@@ -14,12 +15,3 @@ def two_column_text_read(file_name):
         data = vstack((x,y)).T
 
         return data
-try:
-
-    data = two_column_text_read(input('Input File_name: ', ))  # input filename
-    #print(data)
-
-except OSError:
-    print('Filename cannot be found')   # error checking
-
-
