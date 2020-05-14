@@ -1,10 +1,7 @@
-from numpy import loadtxt, linalg, asarray
+from numpy import linalg
 
-data = loadtxt(input('Input Matrix File: '))  # import the data
-array = asarray(data)  # convert data to array
-(w, v) = linalg.eig(array)  # find eigenvalues/eigenvectors
-w.sort()  # change eigenvalues to ascending order
-print(w) #print eigenvalues
-# print(v) #print eigenvectors
-
-#Help from Erik H.
+def lowest_eigenvectors(square_matrix, number_of_eigenvectors = 3):
+    (V, D) = linalg.eig(square_matrix)
+    eigenvalues = V[slice(number_of_eigenvectors)]
+    eigenvectors = D[slice(number_of_eigenvectors)]
+    return eigenvalues, eigenvectors
